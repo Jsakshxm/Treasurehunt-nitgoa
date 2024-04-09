@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes flameAnimation {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  50% {
+    clip-path: inset(0 50% 0 0);
+  }
+  60% {
+    clip-path: inset(0 50% 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.animate-flame {
+  animation: flameAnimation 6s linear infinite; /* Adjust duration as needed */
+}
+
+@keyframes flameAnimationRightToLeft {
+  0% {
+    clip-path: inset(0 0 0 100%);
+  }
+  50% {
+    clip-path: inset(0 0 0 50%);
+  }
+  60% {
+    clip-path: inset(0 0 0 50%);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.animate-flame-right-to-left {
+  animation: flameAnimationRightToLeft 6s linear infinite;
+}
+
