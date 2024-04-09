@@ -25,7 +25,7 @@ const EntryPage = () => {
       
       {/* Subtitle */}
       <p className="mb-8 text-lg text-center lg:text-xl">
-        Embark on a journey into the pixelated horrors.
+        Every Pixel holds a Key!
       </p>
       
       {/* Button to Enter the Treasure Hunt */}
