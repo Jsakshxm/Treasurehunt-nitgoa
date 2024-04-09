@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useState, useRef } from 'react';
-import Tile from '../components/Tile';
+import Tile from "../Components/Tile"
 import tilesData from '../utils/utils';
 
 const IndexPage = () => {
