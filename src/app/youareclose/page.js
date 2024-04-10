@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Game from '../Components/Game';
 
 const Page = () => {
   const [secretKey, setSecretKey] = useState(
@@ -37,6 +38,7 @@ const Page = () => {
   return (
     <div className="flex flex-col items-center justify-between min-h-screen p-10 lg:p-24">
       <h1>Level 2  yeah!</h1>
+      <Game></Game>
     </div>
   );
 };
