@@ -3,7 +3,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import JSConfetti from 'js-confetti'
 import Link from 'next/link'
-import Game from '../Components/Game';
+import Game from '../Components/Game1';
 
 
 
