@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import shuffleArray from "./shuffleFunction"
 import Puzzle from "./Puzzle";
 import Timer from "./Timer";
+import Link from 'next/link';
 
 export default function Game() {
 const [shuffledArray, setShuffledArray] = useState(shuffleArray());
