@@ -15,15 +15,15 @@ const Page = () => {
     if (typeof window !== 'undefined') {
       switch (secretKey) {
         case 'level1':
-          localStorage.setItem('secretkey', 'level2');
+          localStorage.setItem('secretkey', 'level1');
           console.log('Level 1: Setting secretKey to level2');
           break;
         case 'level2':
-          localStorage.setItem('secretkey', 'level3');
+          localStorage.setItem('secretkey', 'level2');
           console.log('Level 2: Setting secretKey to level3');
           break;
         case 'level3':
-          localStorage.setItem('secretkey', 'level4');
+          localStorage.setItem('secretkey', 'level3');
           console.log('Level 3: Setting secretKey to level4');
           break;
         default:

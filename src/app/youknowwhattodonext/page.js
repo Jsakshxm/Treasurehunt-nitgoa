@@ -28,7 +28,7 @@ const Page = () => {
           console.log('Level 3: Setting secretKey to level4');
           break;
         case 'level4':
-          localStorage.setItem('secretkey', 'level5');
+          localStorage.setItem('secretkey', 'level4');
           console.log('Level 4: Setting secretKey to level5');
           break;
         case 'level5':
