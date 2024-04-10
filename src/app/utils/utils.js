@@ -2,7 +2,7 @@
 const tilesData = [
   { id: 1, letter1: 'V', letter2: 'K', sound: 'Welcome.mp3' },
   { id: 2, letter1: 'E', letter2: 'K', sound: 'To.mp3' },
-  { id: 3, letter1: 'I', letter2: 'R', sound: 'A.mp3' },
+  { id: 3, letter1: 'I', letter2: 'R', sound: 'The.mp3' },
   { id: 4, letter1: 'S', letter2: 'U', sound: 'Lost.mp3' },
   { id: 5, letter1: 'C', letter2: 'M', sound: 'Pixel.mp3' }
 ];

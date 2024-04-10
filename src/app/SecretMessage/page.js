@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const SecretMessage = () => {
@@ -17,6 +18,8 @@ const SecretMessage = () => {
         <h3 className="mb-4 text-2xl font-bold text-yellow-500">Get a number:</h3>
         <p className="text-xl text-white">- .-. ..- - .... / .- .-.. --- -. . / - .-. .. ..- -- .--. .... ... / .-.-.- / .... --- .-- / -- .- -. -.-- / ..-. .- -.-. . ... / -.. --- . ... / - .... . / .-.. .. --- -. / --- ..-. / - .-. ..- - .... / .... .- ...- . / ..--..</p>
       </div>
+
+    
     </div>
   );
 };
