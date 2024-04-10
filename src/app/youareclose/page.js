@@ -10,7 +10,7 @@ const Page = () => {
   useEffect(() => {
     // Redirect to '/thiswebsiteisglitchy' if secretKey is level1 (on client-side)
     if (secretKey === 'level1' && typeof window !== 'undefined') {
-      window.location.replace('https://treasurehunt-eta.vercel.app/thiswebsiteisglitchy');
+      window.location.replace('https://treasurehunt.saavyas.in/thiswebsiteisglitchy');
     }
   }, [secretKey]); // Run only when secretKey changes
 
@@ -21,15 +21,15 @@ const Page = () => {
         localStorage.setItem('secretkey', 'level3');
       }
       if (secretKey === 'level4') {
-        window.location.replace('https://treasurehunt-eta.vercel.app/youknowwhattodonext');
+        window.location.replace('https://treasurehunt.saavyas.in/youknowwhattodonext');
         console.log('Level 2: Redirecting to /youknowwhattodonext');
       }
       if (secretKey === 'level5') {
-        window.location.replace('https://treasurehunt-eta.vercel.app/congratulation');
+        window.location.replace('https://treasurehunt.saavyas.in/congratulation');
         console.log('Level 2: Redirecting to /congratulation');
       }
       if (secretKey === 'level3') {
-        window.location.replace('https://treasurehunt-eta.vercel.app/youarecloser');
+        window.location.replace('https://treasurehunt.saavyas.in/youarecloser');
       }
     }
   }, [secretKey]); // Run only when secretKey changes
