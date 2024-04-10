@@ -1,7 +1,9 @@
 import React from 'react';
+import Puzzle from '../Components/Puzzle';
 
 const TreasureHuntPage = () => {
   return (
+    <>
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="max-w-lg p-8 mx-auto bg-white rounded-lg shadow-md">
         <h1 className="mb-4 text-3xl font-bold text-center">Treasure Hunt</h1>
@@ -17,7 +19,7 @@ const TreasureHuntPage = () => {
           The place where the community shines.
         </p>
       </div>
-    </div>
+    </div> <Puzzle/></>
   );
 };
 

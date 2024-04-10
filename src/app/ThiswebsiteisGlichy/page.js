@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Puzzle from '../Components/Puzzle';
 
 const Page = () => {
   const [secretKey, setSecretKey] = useState(
@@ -21,26 +22,28 @@ const Page = () => {
   const handleRedirect = () => {
     switch (secretKey) {
       case 'level3':
-        window.location.href = 'https://treasurehunt-eta.vercel.app/youarecloser';
+        window.location.href = 'https://treasurehunt.saavyas.in/youarecloser';
         console.log('Level 2: Redirecting to /youareclose');
         break;
       case 'level4':
-        window.location.href = 'https://treasurehunt-eta.vercel.app/youknowwhattodonext';
+        window.location.href = 'https://treasurehunt.saavyas.in/youknowwhattodonext';
         console.log('Level 2: Redirecting to /youareclose');
         break;
       case 'level5':
-        window.location.href = 'https://treasurehunt-eta.vercel.app/congratulation';
+        window.location.href = 'https://treasurehunt.saavyas.in/congratulation';
         console.log('Level 2: Redirecting to /youareclose');
         break;
       case 'level2':
       default:
-        window.location.href = 'https://treasurehunt-eta.vercel.app/youareclose';
+        window.location.href = 'https://treasurehunt.saavyas.in/youareclose';
         console.log('Level 2: Redirecting to /youareclose');
     }
   };
 
   return (
+   
     <div className="flex flex-col items-center justify-between min-h-screen p-24">
+     <Puzzle />
       <h1>This site seems glitchy. Try something!</h1>
     </div>
   );

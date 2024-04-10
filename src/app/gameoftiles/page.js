@@ -151,7 +151,7 @@ const page = () => {
   return (
     <>
       {/* 1 */}
-      <div className="grid grid-cols-1 gap-10 p-10 text-center text-black lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-10 p-10 text-center text-black bg-black lg:grid-cols-4">
         <div
           className="rounded flip-card h-96"
           onMouseLeave={() => {

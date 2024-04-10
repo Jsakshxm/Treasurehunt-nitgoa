@@ -20,12 +20,12 @@ const EntryPage = () => {
       
       {/* Title */}
       <h1 className="mb-4 text-4xl font-bold text-center lg:text-6xl">
-        A Lost Pixel
+        The Lost Pixel
       </h1>
       
       {/* Subtitle */}
       <p className="mb-8 text-lg text-center lg:text-xl">
-        Every Pixel holds a Key!
+        A Single Pixel holds a Key!
       </p>
       
       {/* Button to Enter the Treasure Hunt */}
