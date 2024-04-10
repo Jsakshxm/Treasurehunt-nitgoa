@@ -17,9 +17,9 @@ const Page = () => {
             <p className="mb-8 font-mono text-lg text-center">Where whispers gather 'neath a vibrant frame, read the right phrase to ignite the hidden flame.</p>
             <Game />
             <div className="mt-8">
-                <Link href="/QR1.png"
+                <Link href="/QR1.png "
                     className="flex items-center justify-center px-4 py-2 text-gray-900 transition duration-300 ease-in-out bg-white rounded-lg shadow-lg hover:shadow-xl">
-                        <Image src="/QR1.png" alt="QR Code" width={100} height={100} className="mr-2" />
+                        <Image src="/QR1.png" alt="QR Code" width={200} height={200} className="mr-2" />
                         <span>View QR Code</span>
                     
                 </Link>

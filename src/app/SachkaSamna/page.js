@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import JSConfetti from 'js-confetti';
+import { useEffect } from 'react';
+
 
 const Page = () => {
   const [input1, setInput1] = useState('');
@@ -12,6 +14,18 @@ const Page = () => {
   const [result2, setResult2] = useState('');
   const [result3, setResult3] = useState('');
   const [showQR, setShowQR] = useState(false); // State to track QR code visibility
+
+
+  useEffect(() => {
+    joker();
+  },[])
+
+
+
+  const joker = () => {
+    console.log('JOKER - 📞9557307222');
+  }
+
 
   const handleCheck1 = () => {
     if (input1.toUpperCase() === 'GO') {
@@ -53,10 +67,11 @@ const Page = () => {
       <div className="flex flex-col gap-8 text-center">
         <h1 className="text-4xl font-bold lg:text-6xl">Congo Bhai! ❤️ se congo!</h1>
         <p className="text-lg lg:text-xl">Chal Bhai abh, yeh Karke dikha</p>
+        <p className="text-lg lg:text-xl">Find the Key To The Secret Room</p>
       </div>
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
         <div className="flex flex-col items-center">
-          <Link href="/DragonFight">
+          <Link href="/InterviewPreparation">
             <img
               className="drop-shadow-[0_0px_50px_rgb(216,18,93)] rounded-lg animate-pulse"
               src="eye.gif"
@@ -130,6 +145,12 @@ const Page = () => {
       <button onClick={handleShowQR} className="px-4 py-2 mt-4 text-white bg-blue-500 rounded-lg">
         Show QR Code
       </button>
+      {showQR && (
+        <div className="mt-8">
+
+        <img src="meme5.gif" alt=""  className=' w-96' />
+        </div>
+      )}
     </div>
   );
 };

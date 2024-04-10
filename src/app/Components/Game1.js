@@ -88,7 +88,7 @@ return (
 		</div>
 		<Puzzle shuffledArray={shuffledArray} dragStart={dragStart} dragOver={dragOver} dropped={dropped}/>
 		<div className="px-6 mt-4">
-        <Link href="https://www.instagram.com/saavyas.nitg/">
+        <Link href="https://www.instagram.com/saavyas.nitg/"  target="_blank" >
 		<button
 			
 			className="text-black font-bold block bg-gray-900 p-2 rounded w-full h-full bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%"

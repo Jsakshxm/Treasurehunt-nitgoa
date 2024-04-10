@@ -26,10 +26,10 @@ const MainComponent = () => {
 
         {/* New Equations */}
         <div className="p-4 bg-white border border-gray-300 rounded-lg shadow-md">
-          <p className="font-mono text-lg">1<sup>2</sup> - (x - 0)<sup>2</sup> + (y - 3)<sup>2</sup></p>
+          <p className="font-mono text-lg">1<sup>2</sup> = (x - 0)<sup>2</sup> + (y - 3)<sup>2</sup></p>
         </div>
         <div className="p-4 bg-white border border-gray-300 rounded-lg shadow-md">
-          <p className="font-mono text-lg">1<sup>2</sup> - (x - 0)<sup>2</sup> + (y + 3)<sup>2</sup></p>
+          <p className="font-mono text-lg">1<sup>2</sup> = (x - 0)<sup>2</sup> + (y + 3)<sup>2</sup></p>
         </div>
       </div>
 

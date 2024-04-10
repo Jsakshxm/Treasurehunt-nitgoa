@@ -58,6 +58,7 @@ const DragonGifWithText = () => {
         Common flames paint the sky. </p>
       <p className="z-20 font-mono font-medium text-white "> Seek the longest bond they share in flight,
         Sequences of attacks echo in sight. </p></div>
+        
     </div>
   );
 };
