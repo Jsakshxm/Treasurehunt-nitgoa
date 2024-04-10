@@ -9,6 +9,9 @@ import { useEffect } from "react";
 
 
 
+
+import "./Gameoftiles.css";
+
 const page = () => {
   const [card1, setCard1] = useState(0);
   const [card2, setCard2] = useState(false);
@@ -26,48 +29,55 @@ const page = () => {
   const [whoIsWhoans, setWhoIsWhoans] = useState(false);
   const [whoWho, setWhoWho] = useState("");
   const [whoWhoans, setWhoWhoans] = useState(false);
+  const [Enjoyeddd121, setEnjoyeddd121] = useState(false);
 
   const [card2more, setCard2more] = useState(0);
   const [card2color, setCard2Color] = useState("");
   const [card5more, setCard5more] = useState("");
   const [card12open, setCard12open] = useState(false);
   const [card6open, setCard6Open] = useState(false);
-  const [sequence, setsequence] = useState("");
+  let [sequence, setsequence] = useState("");
   const [semifinal, setsemifinal] = useState("");
   const [final, setfinal] = useState("");
   const [card11Open, setCard11Open] = useState(false);
-  const [checkans,setcheckans]=useState(false)
-
+  const [checkans, setcheckans] = useState(false);
+  const [mytext, setmytext] = useState("");
+  const [card111Open, setcard111Open] = useState(false);
 
   const [showElement, setShowElement] = useState(false);
 
   const handleWhoIsWho = () => {
-    if (whoIsWho === "youknowwho" || whoIsWho === "you know who") {
+    if (
+      whoIsWho.toLowerCase() === "youknowwho" ||
+      whoIsWho.toLowerCase() === "you know who"
+    ) {
       setWhoIsWhoans(true);
     }
   };
   const handleWhoWho = () => {
-    if ((whoWho.toLowerCase()) === "owl") {
+    if (whoWho.toLowerCase() === "owl") {
       setWhoWhoans(true);
+      setcard111Open(true);
     }
   };
 
   const whoIsWhoanscontent = (
-    <div href="thalaforareason">
+    <div>
       {/* <button className="px-4 py-2 text-white bg-blue-500">Next</button> */}
-      Congratulations
+      Congratulations! Go to 7 its unlocked!
     </div>
   );
 
   const card1content = (
-    <div className="flex flex-col justify-center w-full h-full gap-2 p-2 text-center bg-white rounded">
-      <div className="flex gap-1">
+    <div className="flex flex-col justify-center w-full h-full gap-2 p-2 text-center bg-black bg-white rounded">
+      <p>Who's there?</p>
+      <div className="flex flex-col gap-2">
         {/* <label for="html">who's here? :</label> */}
         <input
           onChange={(e) => {
             setWhoIsWho(e.target.value);
           }}
-          className="p-1 border"
+          className="p-2 border "
           type="text"
           placeholder="who's here?"
         />
@@ -80,15 +90,15 @@ const page = () => {
       </div>
 
       {whoIsWhoans && (
-        <div className="flex gap-1">
+        <div className="flex flex-col gap-1">
           {" "}
           <input
             onChange={(e) => {
               setWhoWho(e.target.value);
             }}
-            className="p-1 border"
+            className="p-1 border "
             type="text"
-            placeholder="Do you who who?"
+            placeholder="You know who who?"
           />
           <button
             className="px-4 py-2 text-white bg-blue-500"
@@ -103,7 +113,7 @@ const page = () => {
     </div>
   );
   const card2content = (
-    <div className="flex flex-col p-2 bg-white rounded">
+    <div className="flex flex-col p-2 rounded ">
       <p className="mb-12">Bhai Yeh kya hai?</p>
       <div className="flex items-center justify-center gap-2">
         <div className="h-8 w-8 bg-[#ffcd00]"></div>
@@ -111,7 +121,7 @@ const page = () => {
           onChange={(e) => {
             setCard2Color(e.target.value);
           }}
-          className="p-1 border "
+          className="p-1 border grow-0"
           type="text"
           name=""
           id=""
@@ -119,12 +129,15 @@ const page = () => {
       </div>
       <button
         onClick={() => {
-          if (card2color.toLowerCase() === "#ffcd00") {
+          if (
+            card2color.toLowerCase() === "#ffcd00" ||
+            card2color.toLowerCase() === "ffcd00"
+          ) {
             setCard2more(1);
             handlecard3();
           }
         }}
-        className="px-8 py-2 m-2 text-white bg-blue-500 rounded-xl"
+        className="px-8 py-2 m-2 text-white bg-emerald-500 rounded-xl"
       >
         Submit
       </button>
@@ -149,11 +162,30 @@ const page = () => {
   };
 
   return (
-    <>
-      {/* 1 */}
-      <div className="grid grid-cols-1 gap-10 p-10 text-center text-black bg-black lg:grid-cols-4">
+    <div className="game-bg">
+      <svg
+        className="clipped"
+        width="1"
+        height="1"
+        viewBox="0 0 1 1"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <clipPath id="clip-cards" clipPathUnits="objectBoundingBox">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0.096 0H0.08V0.0260417H0.0400009V0.0520833V0.0651042H0.04V0.0520833H0V0.0651042V0.078125V0.921875V0.934896V0.947917H0.04V0.934896H0.0400009V0.947917V0.973958H0.0800009V0.947917V0.934896H0.0800018V0.947917V0.973958V1H0.096H0.120002H0.880001H0.9H0.920001V0.973958L0.959998 0.973958V0.947917V0.934896H0.959999V0.947917H0.999999V0.934896H1V0.0651042H0.999999V0.0520833H0.959999V0.0651042H0.959998V0.0520833V0.0260417H0.920001H0.92V0H0.9H0.88H0.12H0.096ZM0.0800018 0.0651042V0.0520833V0.0260417H0.0800009V0.0520833V0.0651042H0.0800018Z"
+              fill="#D9D9D9"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+      <div className="grid grid-cols-1 gap-10 p-10 text-center text-black bg-black md:grid-cols-3 lg:grid-cols-4 game-bg">
+        {/* 1 */}
         <div
-          className="rounded flip-card h-96"
+          className="rounded flip-card h-96 "
           onMouseLeave={() => {
             setCard1(0);
           }}
@@ -163,7 +195,7 @@ const page = () => {
             onClick={() => setCard1(card1 + 1)}
           >
             <div className="flex-col justify-center h-full bg-white flip-card-front">
-              <p>1</p>
+              <p className="text-2xl">1</p>
               {card1 === 1 && "knock!"}
               {card1 === 2 && "knock knock!"}
             </div>
@@ -174,18 +206,13 @@ const page = () => {
         </div>
 
         {/* //2 */}
-        <div
-          className="rounded flip-card h-96"
-          onMouseLeave={() => {
-            setCard2(false);
-          }}
-        >
+        <div className="rounded flip-card h-96">
           <div
             className={`flip-card-inner ${card2 ? "flip" : ""}`}
             onClick={() => setCard2(true)}
           >
             <div className="flex-col justify-center h-full bg-white flip-card-front">
-              <p>2</p>
+              <p className="text-2xl">2</p>
             </div>
             <div className="bg-white flip-card-back">
               {card2 && card2content}
@@ -194,7 +221,12 @@ const page = () => {
         </div>
 
         {/* 3 */}
-        <div className="rounded flip-card h-96">
+        <div
+          className="rounded flip-card h-96"
+          onMouseLeave={() => {
+            setCard3(false);
+          }}
+        >
           <div
             className={`flip-card-inner ${card3 ? "flip" : ""}`}
             onClick={() => {
@@ -206,7 +238,7 @@ const page = () => {
             }}
           >
             <div className="flex-col justify-center h-full bg-white flip-card-front">
-              <p>3</p>
+              <h1 className="text-2xl">3</h1>
             </div>
             <div className="bg-white flip-card-back">
               {card3 && (
@@ -220,17 +252,22 @@ const page = () => {
         </div>
 
         {/* 4 */}
-        <div className="rounded flip-card h-96">
+        <div
+          className="rounded flip-card h-96"
+          onMouseLeave={() => {
+            setCard4(false);
+          }}
+        >
           <div
             className={`flip-card-inner ${card4 ? "flip" : ""}`}
             onClick={() => setCard4(true)}
           >
             <div className="flex-col justify-center h-full bg-white flip-card-front">
-              <p>4</p>
+              <p className="text-2xl">4</p>
             </div>
             <div className="p-2 bg-white flip-card-back">
               <div>
-                <img src="/voldermort.jpg" alt="" ></img>
+                <Image className="cards2" src="/Voldemort.jpeg" alt="" height={400} width={300}></Image>
                 <p>I am There</p>
               </div>
             </div>
@@ -249,11 +286,11 @@ const page = () => {
             onClick={() => setCard5(true)}
           >
             <div className="flex-col justify-center h-full bg-white flip-card-front">
-              <p>5</p>
+              <p className="text-2xl">5</p>
             </div>
             <div className="p-2 bg-white flip-card-back">
               <div className="flex flex-col">
-                <img src="/Maths.png" alt=""></img>
+                <Image src="/Maths.png" alt="maths" height={400} width={300}></Image>
                 <input
                   type="text"
                   className="p-2 border"
@@ -278,7 +315,7 @@ const page = () => {
 
         {/* 6 */}
         <div
-          className="rounded flip-card h-96"
+          className="rounded flip-card h-96 card"
           onMouseLeave={() => {
             setCard6(false);
           }}
@@ -296,11 +333,16 @@ const page = () => {
             }}
           >
             <div className="flex-col justify-center h-full bg-white flip-card-front">
-              <p>6</p>
+              <p className="text-2xl">6</p>
             </div>
-            <div className="p-2 bg-white flip-card-back">
-              {sequence === "96" && <p>Go to 9</p>}
-              {sequence === "96986" && <p>Go to 9</p>}
+            <div className="flex flex-col items-center justify-center h-full p-2 bg-white flip-card-back">
+              {sequence === "96" && <p>"⁠ ⁠SIX - S"</p>}
+              {sequence === "96986" && (
+                <p>
+                  " ⁠I hold the key to feline lives, but hide in plain sight
+                  with endless ties. "
+                </p>
+              )}
             </div>
           </div>
         </div>
@@ -314,13 +356,23 @@ const page = () => {
         >
           <div
             className={`flip-card-inner ${card7 ? "flip" : ""}`}
-            onClick={() =>{if(whoWhoans){setCard7(true)}else{playErrorSound()}}}
+            onClick={() => {
+              if (whoWhoans) {
+                setCard7(true);
+              } else {
+                playErrorSound();
+              }
+            }}
           >
             <div className="flex-col justify-center h-full bg-white flip-card-front">
-              <p>7</p>
+              <p className="text-2xl">7</p>
             </div>
             <div className="flip-card-back bg-white p-2 bg-[#ffcd00]">
-              <Link href="/thalaforareason"><button className="px-4 py-2 text-white bg-yellow-500 rounded-xl">Go to heaven</button></Link>
+              <Link href="/thalaforareason" target="_blank">
+                <button className="px-4 py-2 text-white bg-yellow-500 rounded-xl">
+                  Go to heaven
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -338,17 +390,23 @@ const page = () => {
               if (sequence === "969") {
                 setCard8(true);
                 setsequence(sequence + "8");
+              } else if (semifinal === "969869" || semifinal === "69869") {
+                setCard8(true);
               } else {
                 playErrorSound();
-                setsequence("");
               }
             }}
           >
             <div className="flex-col justify-center h-full bg-white flip-card-front">
-              <p>8</p>
+              <p className="text-2xl">8</p>
             </div>
-            <div className="p-2 bg-white flip-card-back">
-              {sequence === "9698" && <p>Go to 6</p>}
+            <div className="flex flex-col items-center justify-center h-full p-2 bg-white flip-card-back">
+              {sequence === "9698" && (
+                <p>
+                  "Craftily carved, I maximize space for the golden nectar's
+                  embrace."
+                </p>
+              )}
               {(semifinal === "969869" || semifinal === "69869") && (
                 <p>What is x=1;y=5 then? x-=y+1?</p>
               )}
@@ -357,27 +415,28 @@ const page = () => {
                   onChange={(e) => {
                     setfinal(e.target.value);
                   }}
-                  className=""
+                  className="p-2 m-2 border shrink-0"
                   type="text"
                 ></input>
               )}
               {(semifinal === "969869" || semifinal === "69869") && (
-                <input type="email" className="p-2" />
-              )}
-              {(semifinal === "969869" || semifinal === "69869") && (
-                <button
-                  onClick={() => {
-                    if (final === "-5") {
-                      final === setCard11Open(true);
-                    } else {
-
-                    }
-                  }}
-                  className="px-2 py-4"
-                  type="submit"
-                >
-                  Submit
-                </button>
+                <>
+                  <button
+                    onClick={() => {
+                      if (final === "-5") {
+                        final === setCard11Open(true);
+                        setmytext("Go to 11");
+                        sequence = "";
+                      } else {
+                      }
+                    }}
+                    className="px-2 py-4 m-2 text-white bg-blue-500 rounded-xl"
+                    type="submit"
+                  >
+                    Submit
+                  </button>
+                  <p>{mytext}</p>
+                </>
               )}
               {/* {(semifinal==="969869"||semifinal==="69869") && final==="-5" && } */}
             </div>
@@ -394,31 +453,52 @@ const page = () => {
           <div
             className={`flip-card-inner ${card9 ? "flip" : ""}`}
             onClick={() => {
-              setCard9(true);
-              setsequence(sequence + "9");
+              if (sequence !== "969869") {
+                setCard9(true);
+                setsequence(sequence + "9");
+              }
             }}
           >
             <div className="flex-col justify-center h-full bg-white flip-card-front">
-              <p>9</p>
+              <p className="text-2xl">9</p>
             </div>
-            <div className="p-2 bg-white flip-card-back">
-              {card9 && <p>Go to 6</p>}
-              {sequence === "969" && <p>Go to 8</p>}
+            <div className="flex flex-col items-center justify-center h-full p-2 bg-white flip-card-back">
               {sequence === "969869" && (
                 <div className="flex flex-col">
-                  <p>Wapas aa gya yahan?</p>{" "}
+                  <p>Wapas aa gye yahan?</p>{" "}
                   <input
-                  className="p-2 m-2 border"
+                    className="p-2 m-2 border"
                     onChange={(e) => {
                       setsemifinal(e.target.value);
                     }}
                     type="text"
+                    name=""
+                    id=""
                   />
-                  <button onClick={()=>{setcheckans(true);}} className="px-4 py-2 text-white bg-blue-500">Submit</button>
+                  <button
+                    onClick={() => {
+                      setcheckans(true);
+                    }}
+                    className="px-4 py-2 text-white bg-blue-500"
+                  >
+                    Submit
+                  </button>
                 </div>
               )}
-              {checkans && (semifinal === "969869" || semifinal === "69869") && (
-                <p>Go to 8</p>
+              {/* {checkans &&<p>Go to 8</p>} */}
+              {sequence === "9" ? (
+                <p>
+                  " ⁠Split myself in parts, their sum remains the same, the
+                  first perfect I claim."
+                </p>
+              ) : sequence === "969" ||
+                (checkans &&
+                  (semifinal === "969869" || semifinal === "69869")) ? (
+                <p>
+                  "⁠I loop endlessly, a symbol of infinity turned on its side."
+                </p>
+              ) : (
+                ""
               )}
             </div>
           </div>
@@ -436,11 +516,13 @@ const page = () => {
             onClick={() => setCard10(true)}
           >
             <div className="flex-col justify-center h-full bg-white flip-card-front">
-              <p>10</p>
+              <p className="text-2xl">10</p>
             </div>
             <div className="p-2 bg-white flip-card-back realtive">
-              <img src="/owl.jpeg" alt="" className="h-full pb-10"></img>
-              <p className="absolute -translate-x-1/2 bottom-5 left-1/2">I am who who</p>
+              <Image src="/owl.jpeg" alt="" className="h-full pb-10 cards2" height={400} width={300}></Image>
+              <p className="absolute -translate-x-1/2 bottom-5 left-1/2">
+                I am who who
+              </p>
             </div>
           </div>
         </div>
@@ -454,13 +536,34 @@ const page = () => {
         >
           <div
             className={`flip-card-inner ${card11 ? "flip" : ""}`}
-            onClick={() => { if(card11Open){setCard11(true)}else{playErrorSound()}}}
+            onClick={() => {
+              if (
+                card11Open &&
+                card111Open &&
+                final === "-5" &&
+                card5more === "12"
+              ) {
+                setCard11(true);
+              } else {
+                playErrorSound();
+              }
+            }}
           >
             <div className="flex-col justify-center h-full bg-white flip-card-front">
-              <p>11</p>
+              <p className="text-2xl">11</p>
             </div>
-            <div className="p-2 bg-white flip-card-back">
-              <p>Congratulations</p>
+            <div className="flex flex-col p-2 bg-white flip-card-back">
+              {(card11Open && card111Open && final === "-5" && card5more ==="12") &&
+                <>
+                  {" "}
+                  <p>Congratulations</p>
+                  <img src="https://i.postimg.cc/BQLwfN7X/QR4.png" alt="balle balle" width={50} height={50}></img>
+                  <a className="px-4 py-2 m-2 bg-emerald-500" href="https://i.postimg.cc/BQLwfN7X/QR4.png"  onClick={()=>{setEnjoyeddd121(true);}} download target="_blank">Pixel</a>
+                </>
+            }
+            {Enjoyeddd121 && 
+            <Link className="px-4 py-2 m-2 bg-emerald-500" href="https://youtube.com/shorts/KS5yD4FXUlM?si=ND7ZGochq7Cmubt2" >Enjoyed? Next Level</Link>
+            }
             </div>
           </div>
         </div>
@@ -474,13 +577,19 @@ const page = () => {
         >
           <div
             className={`flip-card-inner ${card12 ? "flip" : ""}`}
-            onClick={() => { if(card12open){setCard12(true);}else{playErrorSound()}}}
+            onClick={() => {
+              if (card12open) {
+                setCard12(true);
+              } else {
+                playErrorSound();
+              }
+            }}
           >
             <div className="flex-col justify-center h-full bg-white flip-card-front">
-              <p>12</p>
+              <p className="text-2xl">12</p>
             </div>
-            <div className="p-2 bg-white flip-card-back">
-              <Link href="/guessinggame">
+            <div className="p-2 flip-card-back">
+              <Link href="/guessinggame" target="_blank">
                 <button className="px-4 py-2 text-white bg-blue-500 rounded-xl">
                   Start Game
                 </button>
@@ -489,9 +598,9 @@ const page = () => {
           </div>
         </div>
 
-      
+       
       </div>
-    </>
+    </div>
   );
 };
 
