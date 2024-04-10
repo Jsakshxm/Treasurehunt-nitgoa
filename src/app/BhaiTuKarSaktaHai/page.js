@@ -1,9 +1,9 @@
-import React from 'react'
-import Puzzle from '../Components/Puzzle'
+"use client"
+import Game from '../Components/Game'
 
 const page = () => {
   return (
-    <div><Puzzle/></div>
+    <div><Game /></div>
   )
 }
 
