@@ -11,7 +11,7 @@ const Page = () => {
   useEffect(() => {
     // Redirect to '/thiswebsiteisglitchy' if secretKey is level1 (on client-side)
     if (secretKey === 'level1' && typeof window !== 'undefined') {
-      window.location.replace('https://treasurehunt.saavyas.in/thiswebsiteisglitchy');
+      window.location.replace('https://treasurehunt.saavyas.in/ThiswebsiteisGlitchy');
     }
   }, [secretKey]); // Run only when secretKey changes
 
