@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import shuffleArray from "./shuffleFunction"
 import Puzzle from "./Puzzle";
 import Timer from "./Timer";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export default function Game() {
 	const router = useRouter();

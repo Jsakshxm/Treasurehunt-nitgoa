@@ -4,8 +4,10 @@ import shuffleArray from "./shuffleFunction"
 import Puzzle from "./Puzzle";
 import Timer from "./Timer";
 import Link from 'next/link';
+import { useRouter } from "next/navigation";
 
 export default function Game() {
+    const router = useRouter();
 const [shuffledArray, setShuffledArray] = useState(shuffleArray());
 const [moves, setMoves] = useState(0);
 const [time, setTime] = useState(0);
@@ -26,6 +28,7 @@ useEffect(() => {
 	if (won) {
 	setWin(true);
 	setTimerActive(false);
+    router.push('https://www.youtube.com/watch?v=DGleYakQYl0');
 	}
 	return;
 }, [moves]);
