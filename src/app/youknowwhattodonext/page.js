@@ -1,7 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react'; 
-
+import React, { useState, useEffect } from 'react';
 import Game from '../Components/Game';
 
 const Page = () => {
@@ -28,7 +27,7 @@ const Page = () => {
           console.log('Level 3: Setting secretKey to level4');
           break;
         case 'level4':
-          localStorage.setItem('secretkey', 'level4');
+          localStorage.setItem('secretkey', 'level5');
           console.log('Level 4: Setting secretKey to level5');
           break;
         case 'level5':
@@ -43,7 +42,7 @@ const Page = () => {
 
   return (
     <div className="flex flex-col items-center justify-between min-h-screen p-10 lg:p-24">
-      <h1>Level 4 yeah!</h1>
+      <h1>Level 3 yeah!</h1>
       <Game></Game>
     </div>
   );
