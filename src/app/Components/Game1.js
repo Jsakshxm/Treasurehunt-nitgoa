@@ -28,7 +28,7 @@ useEffect(() => {
 	if (won) {
 	setWin(true);
 	setTimerActive(false);
-    router.push('https://www.youtube.com/watch?v=DGleYakQYl0');
+    router.push('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
 	}
 	return;
 }, [moves]);
