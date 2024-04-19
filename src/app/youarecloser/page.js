@@ -1,6 +1,8 @@
+
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Game from '../Components/Game';
 
 const Page = () => {
   const [secretKey, setSecretKey] = useState(
@@ -35,16 +37,17 @@ const Page = () => {
     // Handle redirections based on secretKey (on client-side)
     if (typeof window !== 'undefined') {
       if (secretKey === 'level4') {
-        window.location.replace('https://treasurehunt-eta.vercel.app/youknowwhattodonext');
+        window.location.replace('https://treasurehunt.saavyas.in/youknowwhattodonext');
       } else if (secretKey === 'level5') {
-        window.location.replace('https://treasurehunt-eta.vercel.app/congratulation');
+        window.location.replace('https://treasurehunt.saavyas.in/congratulation');
       }
     }
   }, [secretKey]); // Run only when secretKey changes
 
   return (
     <div className="flex flex-col items-center justify-between min-h-screen p-10 lg:p-24 ">
-      <h1>Level 3 yeah!</h1>
+      <h1>Level 2 yeah!</h1>
+      <Game></Game>
     </div>
   );
 };

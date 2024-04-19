@@ -43,7 +43,7 @@ const Page = () => {
   return (
    
     <div className="flex flex-col items-center justify-between min-h-screen p-24">
-     <Puzzle />
+    
       <h1>This site seems glitchy. Try something!</h1>
     </div>
   );

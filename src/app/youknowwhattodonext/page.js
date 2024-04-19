@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Game from '../Components/Game';
 
 const Page = () => {
   const [secretKey, setSecretKey] = useState(
@@ -30,7 +31,7 @@ const Page = () => {
           console.log('Level 4: Setting secretKey to level5');
           break;
         case 'level5':
-          window.location.replace('https://treasurehunt-eta.vercel.app/congratulation');
+          window.location.replace('https://treasurehunt.saavyas.in/congratulation');
           console.log('Level 5: Redirecting to /congratulation');
           break;
         default:
@@ -41,7 +42,8 @@ const Page = () => {
 
   return (
     <div className="flex flex-col items-center justify-between min-h-screen p-10 lg:p-24">
-      <h1>Level 4 yeah!</h1>
+      <h1>Level 3 yeah!</h1>
+      <Game></Game>
     </div>
   );
 };

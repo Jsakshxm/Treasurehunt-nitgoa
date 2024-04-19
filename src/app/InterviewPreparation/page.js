@@ -16,6 +16,9 @@ const DragonGifWithText = () => {
 
   return (
     <div className="relative h-screen bg-black">
+     
+      
+      
       <div className="absolute transform -translate-x-1/2 -translate-y-1/2 left-80 top-3/4">
         <img src="/dragon.gif" alt="Small Dragon" className="object-cover h-96 w-[44rem]" />
       </div>
@@ -49,7 +52,13 @@ const DragonGifWithText = () => {
         </button>
       </div>
 
-      {win && <p className="absolute px-6 py-3 text-lg text-white bg-green-500 rounded-lg bottom-4 left-1/2">Congratulations! Output + 103073 = result</p>}
+      {win && <p className="absolute px-6 py-3 text-lg text-white bg-green-500 rounded-lg bottom-4 left-1/2">Congratulations! Output + 103073 = res  &nbsp; ult</p>}
+      <div className="absolute bottom-0 pt-36"> <p className="z-20 font-mono font-medium text-white ">
+        In realms where dragons soar high,
+        Common flames paint the sky. </p>
+      <p className="z-20 font-mono font-medium text-white "> Seek the longest bond they share in flight,
+        Sequences of attacks echo in sight. </p></div>
+        
     </div>
   );
 };
